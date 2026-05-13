@@ -1,19 +1,19 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_application_2/home_page.dart';
 
-class TaskApp extends StatelessWidget {
-  const TaskApp({super.key});
+import 'package:flutter/material.dart';
+import 'settings_screen.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-
-      theme: ThemeData(
-        primarySwatch: Colors.indigo,
-      ),
-
-      home: const HomePage(),
+      home: SettingsScreen(),
     );
   }
 }
