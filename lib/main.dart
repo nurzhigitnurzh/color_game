@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
-import 'home/home_page.dart';
+import 'screens/memory_game_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MemoryGameApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MemoryGameApp extends StatelessWidget {
+  const MemoryGameApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Найти пару',
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(title: "Мои задачи"),
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xFFF5F5F5),
+        fontFamily: 'Roboto', 
+      ),
+      home: const MemoryGameScreen(),
     );
   }
 }
